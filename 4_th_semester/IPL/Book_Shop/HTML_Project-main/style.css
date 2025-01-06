@@ -1,0 +1,44 @@
+.carousel-image-size{
+    height: 100vh;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.sld{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.sld-trk{
+    display: flex;
+    width: calc(250px * 58);
+    animation: sc 40s linear infinite;
+}
+
+@keyframes sc {
+    0%{
+        transform: translateX(0);
+    }100%{
+        transform: translateX(calc(-250px * 38));
+    }
+}
+
+.sldr{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    perspective: 100px;
+}
+.sldr img:hover{
+    transform: translateZ(20px);
+}
