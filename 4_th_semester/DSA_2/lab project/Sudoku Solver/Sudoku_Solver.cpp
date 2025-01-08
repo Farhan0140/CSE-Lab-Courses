@@ -3,68 +3,72 @@ using namespace std;
 
 //_______________________________________________________________________________________________
 
-bool is_safe(vector<vector<char>>& board, int row, int col, int n) {
-    // For row & col
-    for(int i=0; i<board.size(); i++) {
-        if(board[row][i] == char(n + '0')) {
-            return false;
-        }
+class Solution {
+public:
+    bool is_safe(vector<vector<char>>& board, int row, int col, int n) {
+        for(int i=0; i<board.size(); i++) {
+            if(board[row][i] == char(n + '0')) {
+                return false;
+            }
 
-        if(board[i][col] == char(n + '0')) {
-            return false;
-        }
-    }
-
-    // For 3 * 3 grid
-
-    int start_row = 3 * (row/3);
-    int start_col = 3 * (col/3);
-
-    for(int i=start_row; i<start_row + 3; i++) {
-        for(int j=start_col; j<start_col + 3; j++) {
-            if(board[i][j] == char(n + '0')) {
+            if(board[i][col] == char(n + '0')) {
                 return false;
             }
         }
-    }
 
-    return true;
-}
+        int start_row = 3 * (row/3);
+        int start_col = 3 * (col/3);
 
-
-bool Solve(vector<vector<char>>& board, int row, int col) {
-    if(row == board.size()) {
-        return true;
-    }
-
-    int new_row = 0, new_col = 0;
-    if(col+1 == board.size()) {
-        new_row = row + 1;
-        new_col = 0;
-    } else {
-        new_row = row;
-        new_col = col + 1;
-    }
-
-    if(board[row][col] != '.') {
-        if(Solve(board, new_row, new_col)) {
-            return true;
-        }
-    } else {
-        for(int i=1; i<=9; i++) {
-            if(is_safe(board, row, col, i)) {
-                board[row][col] = char(i + '0');
-                if(Solve(board, new_row, new_col)) {
-                    return true;
-                } else {
-                    board[row][col] = '.';
+        for(int i=start_row; i<start_row + 3; i++) {
+            for(int j=start_col; j<start_col + 3; j++) {
+                if(board[i][j] == char(n + '0')) {
+                    return false;
                 }
             }
         }
+
+        return true;
     }
 
-    return false;
-}
+
+    bool Solve(vector<vector<char>>& board, int row, int col) {
+        if(row == board.size()) {
+            return true;
+        }
+
+        int new_row = 0, new_col = 0;
+        if(col+1 == board.size()) {
+            new_row = row + 1;
+            new_col = 0;
+        } else {
+            new_row = row;
+            new_col = col + 1;
+        }
+
+        if(board[row][col] != '.') {
+            if(Solve(board, new_row, new_col)) {
+                return true;
+            }
+        } else {
+            for(int i=1; i<=9; i++) {
+                if(is_safe(board, row, col, i)) {
+                    board[row][col] = char(i + '0');
+                    if(Solve(board, new_row, new_col)) {
+                        return true;
+                    } else {
+                        board[row][col] = '.';
+                    }
+                }
+            }
+        }
+
+        return false;
+    } 
+
+    void solveSudoku(vector<vector<char>>& board) {
+        Solve(board, 0, 0);
+    }
+};
 
 //_______________________________________________________________________________________________
 
@@ -77,7 +81,8 @@ int main(){
         }
     }
 
-    bool bl = Solve(v, 0, 0);
+    Solution tmp;
+    tmp.solveSudoku(v);
 
     for(int i=0; i<9; i++) {
         for(int j=0; j<9; j++) {
@@ -90,6 +95,8 @@ int main(){
 
 
 //_______________________________________________________________________________________________
+
+
 /*
 5 3 . . 7 . . . .
 6 . . 1 9 5 . . .
