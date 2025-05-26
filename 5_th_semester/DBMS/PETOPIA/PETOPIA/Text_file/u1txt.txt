@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PETOPIA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="top-section">
+            <div class="logo">
+                <img src="images/PETOPIA_logo1.png" alt="PETOPIA Logo" class="logo-image">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search Pet Essentials">
+                <span class="search-icon">&#128269;</span>
+            </div>
+        </div>
+        <div class="bottom-section">
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="shop-link">Shop</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="cat_dog.html">Cat&Dog</a>
+                            <div class="submenu-content">
+                                <a href="cat-food.html">Food</a>
+                                <a href="cat-litter.html">Litter</a>
+                                <a href="cat-toys.html">Toys</a>
+                                <a href="cat-medicine.html">Medicine</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#reviews">Reviews</a>
+                <a href="#about">About</a>
+                <div class="dropdown">
+                    <a href="#" class="services-link">Services</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-submenu">
+                            <a href="services.html">Buy&Sell</a>
+                            <a href="services.html">Adoption</a>
+                            <a href="services.html">Health Checkup</a>
+                            <a href="grooming.html">Grooming</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <a href="myaccount.html" id="myAccountBtn">My Account</a>
+                <a href="rewards.html">Rewards</a>
+                <a href="cart.html">Cart</a>
+                <a href="contact.html" class="contact">&#128222; Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Home Section -->
+    <div class="content home-section" id="home">
+        <div class="home-content">
+            <h1>Welcome to PETOPIA</h1>
+            <p>Your one-stop shop for all pet essentials and grooming services.</p>
+            <button class="contact-button" onclick="window.location.href='contact.html'">Contact Us</button>
+        </div>
+        <div class="home-image">
+            <img src="images/photo1.jpg" alt="Pet Image">
+        </div>
+    </div>
+
+    <!-- Shop Section -->
+    <div class="shop-section" id="shop-section">
+        <h2>Category</h2>
+        <div class="categories">
+            <div class="category-card" id="food">
+                <img src="images/photo3.jpg" alt="Food">
+                <a href="cat-food.html" class="shop-btn">Food</a>
+            </div>
+            <div class="category-card" id="litter">
+                <img src="images/photo4.jpg" alt="Litter">
+                <a href="cat-litter.html" class="shop-btn">Litter</a>
+            </div>
+            <div class="category-card" id="toys">
+                <img src="images/photo5.jpg" alt="Toys">
+                <a href="cat-toys.html" class="shop-btn">Toys</a>
+            </div>
+            <div class="category-card" id="medicine">
+                <img src="images/photo6.jpg" alt="Medicine">
+                <a href="cat-medicine.html" class="shop-btn">Medicine</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Review Section -->
+    <div class="review-section" id="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review-cards-wrapper">
+            <div class="review-cards">
+                <!-- Repeat review cards dynamically if required -->
+                <div class="review-card">
+                    <p><span class="quote">“</span>Great customer service and quick delivery.<span class="quote">”</span></p>
+                    <div class="review-details">
+                        <img src="https://via.placeholder.com/50" alt="Customer Image" class="review-image">
+                        <div>
+                            <h4>Emma Brown</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <img src="images/photo2.jpg" alt="About Us Image">
+        <div class="about-content">
+            <h2>About PETOPIA</h2>
+            <p>At PETOPIA, we are passionate about providing top-quality products and services for your beloved pets. Whether it is nutritious food, fun toys, grooming services, or expert advice, we are here to ensure your furry friends are happy, healthy, and loved.</p>
+            <p>Our mission is to create a haven for pet owners, offering everything they need in one convenient place. With a dedicated team and a love for animals, PETOPIA is your trusted partner in pet care.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <div class="services-section" id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="images/photo7.png" alt="Buy & Sell Icon" class="service-icon">
+                <h3>Buy & Sell</h3>
+                <p>Connect with buyers and sellers of pets and pet products easily and safely.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/photo8.png" alt="Adoption Icon" class="service-icon">
+                <h3>Adoption</h3>
+                <p>Find loving homes for pets or adopt a furry friend into your family.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/photo9.png" alt="Health Checkup Icon" class="service-icon">
+                <h3>Health Checkup</h3>
+                <p>Ensure your pets are in the best health with our trusted vet services.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/photo10.png" alt="Grooming Icon" class="service-icon">
+                <h3>Grooming</h3>
+                <p>Professional grooming services to keep your pets looking and feeling great.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section logo-section">
+                <img src="images/PETOPIA_logo1.png" alt="PETOPIA Logo" class="footer-logo">
+                <p>PETOPIA is your one-stop online pet shop, providing quality food and accessories for your beloved pets. We deliver happiness to your doorstep!</p>
+            </div>
+            <div class="footer-section category">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a href="cat_dog.html">Food</a></li>
+                    <li><a href="cat_dog.html">Accessories</a></li>
+                    <li><a href="cat_dog.html">Medicine</a></li>
+                </ul>
+            </div>
+            <div class="footer-section quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p><strong>Address:</strong> 53/6 Mirpur pallabipolashi, Dhaka - 1212</p>
+                <p><strong>Email:</strong> <a href="mailto: petopia123bd@gmail.com">petopia123bd@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+8801912345674">+8801912-345674</a></p>
+            </div>
+            <div class="footer-section social-media">
+                <a href="#"><img src="images/p1.png" alt="Facebook"></a>
+                <a href="#"><img src="images/p2.png" alt="Instagram"></a>
+                <a href="#"><img src="images/p4.png" alt="WhatsApp"></a>
+                <a href="#"><img src="images/p3.png" alt="Twitter"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PETOPIA. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+}
+
+.navbar .top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    width: 120px;
+}
+
+.navbar .search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.navbar .search-icon {
+    cursor: pointer;
+}
+
+.navbar .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar .top-section,
+    .navbar .bottom-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .actions {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+/* Home Section */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.home-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.home-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Home Section */
+@media (max-width: 768px) {
+    .home-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Shop Section */
+.shop-section {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.shop-section h2 {
+    margin-bottom: 20px;
+}
+
+.categories {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-card {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.category-card:hover {
+    transform: scale(1.05);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.shop-btn {
+    display: block;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Responsive Shop Section */
+@media (max-width: 768px) {
+    .category-card {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Review Section */
+.review-section {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.review-cards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.review-card {
+    flex: 1 1 calc(30% - 20px);
+    max-width: calc(30% - 20px);
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.review-card .review-details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Responsive Review Section */
+@media (max-width: 768px) {
+    .review-card {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .review-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.footer-section {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+}
+
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-section {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
