@@ -1,0 +1,155 @@
+// Sum
+
+org 100h
+MOV AH, 1
+INT 21H
+MOV BL, AL
+MOV AH, 2
+MOV DL, 20H
+INT 21H
+MOV AH, 1
+INT 21H
+MOV BH, AL
+ADD BL, BH
+SUB BL, 48
+MOV AH, 2
+MOV DL, 10
+INT 21H
+MOV DL, 13
+
+INT 21H
+MOV DL, BL
+INT 21H
+ret
+
+// sub
+
+org 100h
+MOV AH, 1
+INT 21H
+MOV BL, AL
+MOV AH, 2
+MOV DL, 20H
+INT 21H
+MOV AH, 1
+INT 21H
+MOV BH, AL
+SUB BL, BH
+ADD BL, 48
+MOV AH, 2
+MOV DL, 10
+INT 21H
+MOV DL, 13
+
+INT 21H
+MOV DL, BL
+INT 21H
+Ret
+
+
+// a-z
+
+org 100h
+MOV BL ,97
+lOOP:
+MOV AH, 2
+MOV DL, BL
+INT 21H
+MOV DL,32
+INT 21H
+INC BL
+CMP BL, 122
+JLE LOOP
+
+Ret
+
+// 9-1
+
+org 100h
+MOV BL ,57
+lOOP:
+MOV AH, 2
+MOV DL, BL
+INT 21H
+MOV DL,32
+INT 21H
+DEC BL
+CMP BL, 49
+JGE LOOP
+
+Ret
+
+// triangle
+
+org 100h
+MAIN:
+MOV CX, 5
+MOV BL, 1
+TOP:
+MOV CL, BL
+LEVEL1:
+MOV AH, 2
+MOV DL, &#39;*&#39;
+INT 21H
+LOOP LEVEL1
+
+INC BL
+CMP BL, 6
+JG EXIT
+MOV AH, 2
+MOV DL, 10
+INT 21H
+MOV DL, 13
+INT 21H
+JMP TOP
+EXIT:
+MOV AH, 4CH
+INT 21H
+
+
+
+// piramide
+
+org 100h
+MAIN:
+mov bh, 5
+mov bl, 1
+outer_loop:
+mov al, bh
+sub al, bl
+mov cl, al
+print_space:
+cmp cl, 0
+je print_star
+mov ah, 2
+mov dl, &#39; &#39;
+int 21h
+dec cl
+jmp print_space
+print_star:
+mov al, bl
+shl al, 1
+dec al
+mov cl, al
+star_loop:
+
+cmp cl, 0
+je row_done
+mov ah, 2
+mov dl, &#39;*&#39;
+int 21h
+dec cl
+jmp star_loop
+row_done:
+mov ah, 2
+mov dl, 0Dh
+int 21h
+mov dl, 0Ah
+int 21h
+inc bl
+cmp bl, bh
+jg exit
+jmp outer_loop
+exit:
+mov ah, 4Ch
+int 21h
