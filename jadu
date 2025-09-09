@@ -153,3 +153,49 @@ jmp outer_loop
 exit:
 mov ah, 4Ch
 int 21h
+
+
+// array of char
+
+org 100h
+
+DATA_SEGMENT:
+  ARRAY DB 'A','B','C','D','E'
+  
+CODE_SEGMENT:
+  MOV CX,5
+  MOV SI,0
+  PRINT:
+    MOV AH,2
+    MOV DL,[ARRAY+SI]
+    INT 21H
+    
+    INC SI
+    LOOP PRINT
+
+ret
+
+
+
+// array of string
+
+org 100h
+
+DATA_SEGMENT:
+  ARRAY DB 'HELLO AND WELCOME'
+  
+CODE_SEGMENT:
+  MOV CX,17
+  MOV SI,0
+  PRINT:
+      MOV AH,2
+      MOV DL,[ARRAY+SI]
+      INT 21H
+      
+      INC SI
+      LOOP PRINT 
+
+ret
+
+
+
