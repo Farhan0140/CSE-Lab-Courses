@@ -3,7 +3,7 @@
 # Pages
 - [Page 1](docs/page1.md) -> [**1. Scalar & Array Operations**](docs/page1.md)
 - [Page 2](docs/page2.md)  -> [**2. Unique Matrix Value Investigation**](docs/page2.md)
-<!-- - [Page 3](docs/page3.md) -->
+- [Page 3](docs/page3.md)  -> [**3. Matrix Operations and Visualization**](docs/page3.md)
 
 
 ## 1️⃣ NumPy
@@ -122,4 +122,4 @@ plt.show()
 # Pages
 - [Page 1](docs/page1.md) -> [**1. Scalar & Array Operations**](docs/page1.md)
 - [Page 2](docs/page2.md)  -> [**2. Unique Matrix Value Investigation**](docs/page2.md)
-<!-- - [Page 3](docs/page3.md) -->
+- [Page 3](docs/page3.md)  -> [**3. Matrix Operations and Visualization**](docs/page3.md)
