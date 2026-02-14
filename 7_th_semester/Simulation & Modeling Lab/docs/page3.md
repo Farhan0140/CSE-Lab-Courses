@@ -208,7 +208,7 @@ plt.legend()
 plt.show()
 ```
 
-![Plot Output](images/plot.png)
+![images/plot.png](https://github.com/Farhan0140/CSE-Lab-Courses/blob/cac2f41b5b4f151eccb86425b1068b395998f155/7_th_semester/Simulation%20%26%20Modeling%20Lab/Image/Screenshot%202026-02-14%20211011.png)
 
 ---
 
@@ -243,7 +243,7 @@ plt.title('Heatmap of 4x4 Matrix')
 plt.show()
 ```
 
-![Plot Output](images/plot.png)
+![[Plot Output](images/plot.png)](https://github.com/Farhan0140/CSE-Lab-Courses/blob/cac2f41b5b4f151eccb86425b1068b395998f155/7_th_semester/Simulation%20%26%20Modeling%20Lab/Image/Screenshot%202026-02-14%20211023.png)
 
 ---
 
@@ -345,7 +345,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-![Plot Output](images/plot.png)
+![[Plot Output](images/plot.png)](https://github.com/Farhan0140/CSE-Lab-Courses/blob/cac2f41b5b4f151eccb86425b1068b395998f155/7_th_semester/Simulation%20%26%20Modeling%20Lab/Image/Screenshot%202026-02-14%20211040.png)
 
 <br>
 <br>
